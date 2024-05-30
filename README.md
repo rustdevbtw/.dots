@@ -74,7 +74,7 @@ Just install it, and add `eval $(starship init $SHELL)` to your RC and it should
 
 ### 6. ZSH
 
-Now, I use ZSH with OMZ (Oh-My-ZSH), Antidote (package manager), and Powerlevel10K (prompt framework). Install them, and they should work out-of-box.
+Now, I use ZSH with OMZ (Oh-My-ZSH), Antidote (package manager), and Powerlevel10K (prompt framework). Install Antidote to `~/.antidote` (and don't forget to add to PATH) and it all should just work.
 
 ### 7. NeoVIM
 
