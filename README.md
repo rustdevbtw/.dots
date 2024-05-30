@@ -28,7 +28,7 @@ Hyprland requires no other change to work with the config, except the required p
 
 1. `kitty`
 2. `rofi` (for app launcher and stuff, I use the wayland fork: [`rofi-wayland`](https://archlinux.org/packages/extra/x86_64/rofi-wayland))
-3. `qt[5,6]ct` - recommended, for Qt stuff
+3. `qt{5,6}ct` - recommended, for Qt stuff
 4. `waybar` (more on that later)
 5. `wl-clipboard` (for copy-pasta)
 6. `hyprpaper` (for wallpaper, more on that later)
