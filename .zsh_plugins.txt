@@ -1,0 +1,5 @@
+romkatv/powerlevel10k 
+ohmyzsh/ohmyzsh
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+rupa/z

@@ -1,0 +1,134 @@
+@import "frappe.css";
+
+* {
+    font-family:
+        Candy Icons,
+        Font Awesome,
+        CaskaydiaCove Nerd Font;
+    font-size: 13px;
+    min-height: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#waybar {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: alpha(@surface0, 0.8);
+    color: @text;
+    border-radius: 20px;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    border: 0.1px solid transparent;
+}
+
+#custom-archicon {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #1793d1;
+    font-size: 18px;
+}
+
+#workspaces,
+#custom-weather {
+    padding: 0.5rem 0.5rem;
+    margin: 5px 0;
+}
+
+#workspaces button {
+    color: @lavender;
+    border-radius: 1rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+#workspaces button.active {
+    color: @sky;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+    border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#network,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#wireplumber,
+#window,
+#custom-lock,
+#custom-power {
+    padding: 0.5rem 0.5rem;
+    margin: 5px 0;
+}
+
+#clock {
+    color: @blue;
+    border-radius: 0px 1rem 1rem 0px;
+    margin-right: 0.5rem;
+}
+
+#network {
+    color: @blue;
+    padding-right: 0.8em;
+}
+
+#battery {
+    color: @green;
+    padding-right: 0.8em;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#backlight,
+#battery {
+    border-radius: 0;
+}
+
+#pulseaudio {
+    color: @maroon;
+}
+
+#window {
+    margin-left: 1rem;
+    border-radius: 1rem 0px 0px 1rem;
+}
+
+#custom-music {
+    color: @mauve;
+    border-radius: 1rem;
+}
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @red;
+}
+
+#tray {
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
