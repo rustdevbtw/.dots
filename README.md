@@ -30,12 +30,17 @@ Hyprland requires no other change to work with the config, except the required p
 2. `rofi` (for app launcher and stuff, I use the wayland fork: [`rofi-wayland`](https://archlinux.org/packages/extra/x86_64/rofi-wayland))
 3. `qt{5,6}ct` - recommended, for Qt stuff
 4. `waybar` (more on that later)
+
+> > [!NOTE]
+> I no longer use Waybar, and the Waybar config will no longer be maintained. It is recommended to use AGS instead.
+
 5. `wl-clipboard` (for copy-pasta)
 6. `hyprpaper` (for wallpaper, more on that later)
 7. `hyprlock` (for lock, more on that later)
 8. `cliphist` (for clipboard management)
 9. `swaync` (for notifications)
 10. `polkit-kde-agent` (for authentication)
+11. `aylurs-gtk-shell` (The best way to make *beautiful* **and** *functional* wayland widgets)
 
 Additionally, for the menu to work, adjust the path (change from `/home/rajdeep` to *your* `$HOME`).
 
@@ -83,3 +88,7 @@ Should work out-of-box with zero issues. Just install it.
 ### 8. Kitty
 
 Just install, and it'll work.
+
+### 9. AGS
+
+The AGS Config is created to be as independent as possible. To match the theme, you'd need to install the Catppuccin GTK Theme (I can't tell you how, it's so damn complicated) and the Breeze Cursor Icon Theme. You may need to make a few changes in the `.config/ags/config.js` file.
