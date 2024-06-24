@@ -1,3 +1,5 @@
+import { Launcher } from "./others/launcher.js"
+
 const { GLib } = imports.gi;
 
 // Import services
@@ -271,6 +273,7 @@ App.config({
         // Uncomment these lines for bars on multiple monitors
         // Bar(1),
         // Bar(2),
+        Launcher()
     ],
     style: './style.css',
     iconTheme: "breeze-cursors",

@@ -123,3 +123,31 @@ highlight {
   padding-right: 7px;
   margin: 5px;
 }
+
+window.Launcher {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+window.Launcher .app-icon {
+  font-size: 30px;
+  margin-right: 16px;
+  margin-left: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px 12px 12px 20px;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+
+window.Launcher .title {
+  font-size: 30px;
+  margin-right: 16px;
+  margin-left: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 12px 20px 20px 12px;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
