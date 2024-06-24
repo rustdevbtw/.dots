@@ -47,7 +47,7 @@ function Workspaces() {
 // Client Title Widget
 function ClientTitle() {
     const title = hyprland.active.client.bind("title").as(title =>
-        `  ${title.length > 25 ? title.slice(0, 25) + '...' : title.length > 0 ? title : 'None!'}`
+        `${title.length > 25 ? title.slice(0, 25) + '...' : title.length > 0 ? title : 'None!'}`
     );
     return Widget.Button({
         class_name: "client-title",
