@@ -75,8 +75,20 @@ function Arch() {
     });
 }
 
+
+function SoundBar(is_visible) {
+  return Widget.Slider({
+      value: audio.speaker.bind("volume"),
+      drawValue: false,
+      hexpand: true,
+      onChange: ({ value }) => audio.speaker.volume = value,
+      class_name: "vol_slider",
+  })
+}
+
 // Volume Control Widget
 function Volume() {
+    const is_visible = Variable(false);
     const icons = {
         101: "overamplified",
         67: "high",
@@ -93,16 +105,8 @@ function Volume() {
         return `audio-volume-${icons[icon]}-symbolic`;
     }
 
-    const slider = Widget.Slider({
-        class_name: "vol_slider",
-        hexpand: true,
-        draw_value: false,
-        on_change: ({ value }) => audio.speaker.volume = value,
-        value: audio.speaker.bind("volume"),
-    });
-
-    const icon = Widget.Icon({
-        icon: Utils.watch(getIcon, audio.speaker, getIcon),
+    const icon = Widget.Icon().hook(audio.speaker, s => {
+        s.icon = getIcon();
     });
 
     const icon_btn = Widget.Button({
@@ -110,20 +114,25 @@ function Volume() {
         child: icon,
         onClicked: async () => {
             try {
-                await Utils.execAsync('/usr/bin/xdg-open "https://github.com/cdemoulins/pamixer"');
+                is_visible.setValue(!is_visible.getValue());
             } catch (e) {
                 console.error("Error opening link:", e);
             }
         },
     });
 
+    const bar = SoundBar(is_visible);
+
     return Widget.Box({
         class_name: "volume",
         children: [
-            slider,
+            bar,
             Widget.Label({ label: audio.speaker.bind("volume").as(v => `${Math.round(v * 100)}%`) }),
             icon_btn,
         ],
+    }).hook(is_visible, s => {
+        s.children[0].set_visible(is_visible.getValue());
+        s.children[1].set_visible(is_visible.getValue());
     });
 }
 
@@ -273,7 +282,7 @@ App.config({
         // Uncomment these lines for bars on multiple monitors
         // Bar(1),
         // Bar(2),
-        Launcher()
+        Launcher(),
     ],
     style: './style.css',
     iconTheme: "breeze-cursors",
