@@ -6,11 +6,11 @@ const AppItem = app => Widget.Button({
     on_clicked: async () => {
         try {
           App.closeWindow(WINDOW_NAME)
-          await Utils.execAsync(`/bin/sh -c ${app.executable}`)
+          await Utils.execAsync(`/bin/sh -c "${app.executable}"`)
         } catch (e) {
           console.error(`Error launching ${app.executable}: ${e}`)
           console.info("Trying to launch with Kitty...");
-          await Utils.execAsync(`/bin/kitty /bin/sh -c ${app.executable}`);
+          await Utils.execAsync(`/bin/kitty /bin/sh -c "${app.executable}"`);
         }
     },
     attribute: { app },
