@@ -1,6 +1,8 @@
 export TERM_PROGRAM_VERSION="[master]"
 export PF_INFO="ascii title os host kernel shell uptime memory"
 pfetch
+# bun completions
+[ -s "/home/rajdeep/.bun/_bun" ] && source "/home/rajdeep/.bun/_bun"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -102,7 +104,3 @@ function getback {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# bun completions
-[ -s "/home/rajdeep/.bun/_bun" ] && source "/home/rajdeep/.bun/_bun"
-source /usr/share/nvm/init-nvm.sh
