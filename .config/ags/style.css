@@ -1,5 +1,4 @@
 * {
-  border-radius: 20px;
   font-size: 15px;
 }
 
@@ -9,10 +8,17 @@ button:hover {
 
 window.bar {
     margin-top: 5px;
-    background-color: @theme_bg_color;
+    background-color: transparent;
     color: @theme_fg_color;
     min-height: 55px;
     padding: 3px;
+}
+
+window.bar .left0, .left1, .right {
+  background-color: @theme_bg_color;
+  border-radius: 20px;
+  margin: 5px;
+  padding-right: 5px;
 }
 
 button {
@@ -20,13 +26,17 @@ button {
     padding-top: 0;
     padding-bottom: 0;
     margin: 5px;
-    background-color: transparent;
 }
 
-.arch {
+.logo-symbol {
+    background-color: @theme_bg_color;
     color: @theme_selected_bg_color;
     font-weight: bold;
-    font-size: 32px;
+    margin: 5px;
+    border-radius: 70px;
+    padding-left: 30px;
+    padding-right: 35px;
+    font-size: 27px;
 }
 
 .workspaces {
@@ -35,14 +45,13 @@ button {
 
 .workspaces button {
     border-radius: 5px;
-    background-color: @theme_bg_color;
     color: @theme_fg_color;
     margin-left: 4.5px;
     margin-right: 4.5px;
 }
 
 .workspaces button:first-child {
-    border-radius: 12px 5px 5px 12px;
+    border-radius: 20px 5px 5px 20px;
 }
 
 .workspaces button:last-child {
@@ -73,10 +82,15 @@ label {
     border-radius: 5px;
 }
 
+.client-title {
+    border-radius: 5px 20px 20px 5px;
+}
+
 .client-title:hover,
 .icon {
   color: @theme_selected_fg_color;
   background-color: @theme_selected_bg_color;
+
 }
 
 .icon {
@@ -98,13 +112,14 @@ highlight {
   padding: 5px;
   margin: 3px;
   margin-right: 10px;
+  border-radius: 20px;
 }
 
 .vol_icon,
 .pw_icon {
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color;
-  border-radius: 5px;
+  border-radius: 20px 5px 5px 20px;
 }
 
 .pw_icon {

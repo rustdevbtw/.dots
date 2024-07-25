@@ -26,12 +26,12 @@ paru -S hyprland-git
 
 Hyprland requires no other change to work with the config, except the required packages (install them):
 
-1. `kitty`
+1. `wezterm`/`kitty`
 2. `rofi` (for app launcher and stuff, I use the wayland fork: [`rofi-wayland`](https://archlinux.org/packages/extra/x86_64/rofi-wayland))
 3. `qt{5,6}ct` - recommended, for Qt stuff
-4. `waybar` (more on that later)
+4. `ags`/`waybar` (more on that later)
 
-> > [!NOTE]
+> [!NOTE]
 > I no longer use Waybar, and the Waybar config will no longer be maintained. It is recommended to use AGS instead.
 
 5. `wl-clipboard` (for copy-pasta)
@@ -85,10 +85,17 @@ Now, I use ZSH with OMZ (Oh-My-ZSH), Antidote (package manager), and Powerlevel1
 
 Should work out-of-box with zero issues. Just install it.
 
-### 8. Kitty
+### 8. WezTerm 
 
 Just install, and it'll work.
 
-### 9. AGS
+### 9. Kitty
+
+Just install, and it'll work.
+
+> [!NOTE]
+> I no longer actively use Kitty. Instead, check out **WezTerm**!
+
+### 10. AGS
 
 The AGS Config is created to be as independent as possible. To match the theme, you'd need to install the Catppuccin GTK Theme (I can't tell you how, it's so damn complicated) and the Breeze Cursor Icon Theme. You may need to make a few changes in the `.config/ags/config.js` file.

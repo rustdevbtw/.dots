@@ -7,7 +7,7 @@
   // "width": 1280, // Waybar width
   "spacing": 2, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["custom/weather", "hyprland/workspaces"],
+  "modules-left": ["custom/weather", "hyprland/workspaces", "tray"],
   "modules-center": ["custom/archicon"],
   "modules-right": [
     "hyprland/window",
